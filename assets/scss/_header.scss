@@ -1,0 +1,47 @@
+//# Header
+//# ---------------------------------------------------------------------
+header {
+  section {
+    height: 100%;
+
+    #main-header {
+      height: 100%;
+
+      .align-items-center {
+        height: 100%;
+        padding: 1rem 0 0.5rem 0;
+      }
+    }//#main-header
+  }//section
+}
+
+//# Altura
+//# ---------------------------------------------------------------------
+header#splash {
+  height: 100vh;
+}
+
+header#home {
+  height: 91vh;
+}
+
+header#page {
+  height: 50vh;
+}
+
+//# Color
+//# ---------------------------------------------------------------------
+header {
+  section.color-light {
+    background-color: $white;
+  }
+  section.color-light-o {
+    background-color: rgba($white, .4);
+  }
+  section.color-cream {
+    background-color: $cream;
+  }
+  section.color-cream-o {
+    background-color: rgba($cream, .4);
+  }
+}

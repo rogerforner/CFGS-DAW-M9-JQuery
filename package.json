@@ -1,0 +1,32 @@
+{
+  "name": "tinkeringJQuery",
+  "version": "1.0.0",
+  "description": "M09 - Disseny d'interfícies web, Institut Montsià. DAW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogerforner/tinkeringJQuery.git"
+  },
+  "keywords": [],
+  "author": "Enric Beltran, Javier Lóper, Roger Forner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rogerforner/tinkeringJQuery/issues"
+  },
+  "homepage": "https://github.com/rogerforner/tinkeringJQuery#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.13.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-paths": "^2.1.0"
+  }
+}
