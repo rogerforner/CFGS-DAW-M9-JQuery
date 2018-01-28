@@ -4,7 +4,7 @@
 ### Clonar el repositori
 
 ```
-$ git clone git@github.com:rogerforner/WebsAlPunt_eShared.git
+$ git clone https://github.com/rogerforner/tinkeringJQuery.git
 ```
 
 ### Instal·lar dependències
