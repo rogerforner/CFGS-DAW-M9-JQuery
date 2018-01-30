@@ -73,24 +73,25 @@ $(document).ready(function(){
 });
 
 /*
-#Animate
+#Animate  #chaining
 -------------------------------------------------------------------------*/
-$(document).ready(function(){
+// $(document).ready(function(){
     $("#btn").click(function(){
         var div = $("#animate");
         if(div.attr('style')){
-            div.removeAttr('style');
-            div.addClass( "hidden" );
+            div.removeAttr('style').addClass( "hidden" ); //chain element.
+            masInfo();
         }else{
 
             div.removeClass( "hidden" )
             div.animate({left: '300px'}, "slow");
             div.animate({fontSize: '3em'}, "slow");
+            masInfo();
         }
 
 
     });
-});
+// });
 
 /*
 # Stop
@@ -98,6 +99,22 @@ $(document).ready(function(){
 $("#stop").click(function(){
     $("#animate").stop();
 });
+
+/*
+#Set
+------------------------------------------------------------------------------ */
+function masInfo(){
+    var div = $("#info");
+    if(div.hasClass('hidden')){
+        div.text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est possimus dolorem quia corporis, sequi eum sed asperiores sapiente cupiditate dolores fugit sint doloribus tempore quas reprehenderit aperiam mollitia explicabo veniam.");
+        setTimeout(function(){ div.removeClass( "hidden" ) }, 2000);
+    }else{
+        div.addClass( "hidden" );
+        div.empty();
+
+    }
+}
+
 
 
 

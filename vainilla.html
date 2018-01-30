@@ -38,11 +38,19 @@
       display: none;
     }
     .masInfo{
-      background:lightGrey;
+      background:#FF9DC4;
       height:100px;
       width:300px;
       position:absolute;
-      color: blue;
+      color: lightblue;
+    }
+    .textInfo{
+      border: pink;
+      height: 150px;
+      width: 100%;
+      background-color: lightgreen;
+      position: relative;
+      padding: 20px;
     }
   </style>
 </head>
@@ -100,20 +108,16 @@
           </div>
           <div class="col-md-6">
             <div class="text-center">
-              <img id="btni" src="assets/img/vainilla_1.jpg" height="450px" width="auto" class="rounded shadow-1" alt="Gelat de la revesàvia Pepeta">
+              <img id="btni" src="assets/img/vainilla_1.jpg" height="450px" width="auto" class="rounded shadow-1" alt="Gelat de vainilla d'alta qualitat.a">
             </div>
           </div>
-          <div class="form-group">
-            <h3>Mantinte informat</h3>
-            <label for="">Nom: </label>
-            <input type="text" class="form-control"  placeholder="" value="">
-            <label for="">Email: </label>
-            <input type="text" class="form-control"  placeholder="" value="">
-            <br>
-            <button type="button" id="info" class="btn btn-outline-secondary"name="button">Informam</button>
-          </div>
-        </div>
+
         <!-- FINAL PICAR CODI -->
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-right">
+          <div id="info" class="hidden textInfo"></div>
+        </div>
       </div>
     </main>
   <!-- PEU DE PÀGINA -->
