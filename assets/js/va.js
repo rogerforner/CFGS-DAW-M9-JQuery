@@ -18,16 +18,16 @@ $("nav a#va").addClass("active");
 /*
 # Get
 ----------------------------------------------------------------------------- */
-$("#btn").click(function(){
-    var x=$("#text").val();
-    $("#modal").text(x);
-});
+// $("#btn").click(function(){
+//     var x=$("#text").val();
+//     $("#modal").text(x);
+// });
 /*
 # Fade
 ----------------------------------------------------------------------------- */
-$("#btn").click(function(){
-    $("#exampleModal").fadeIn("slow");
-});
+// $("#btn").click(function(){
+//     $("#exampleModal").fadeIn("slow");
+// });
 
 $("#btnt1").click(function(){
     $("#exampleModal").fadeOut(2000);
@@ -62,3 +62,43 @@ $("input").focus(function(){
 $("input").blur(function(){
     $(this).css("background-color", "#cccccc");
 });
+
+/*
+#Slider
+---------------------------------------------------------------------*/
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+
+/*
+#Animate
+-------------------------------------------------------------------------*/
+$(document).ready(function(){
+    $("#btn").click(function(){
+        var div = $("#animate");
+        if(div.attr('style')){
+            div.removeAttr('style');
+            div.addClass( "hidden" );
+        }else{
+
+            div.removeClass( "hidden" )
+            div.animate({left: '300px'}, "slow");
+            div.animate({fontSize: '3em'}, "slow");
+        }
+
+
+    });
+});
+
+/*
+# Stop
+-----------------------------------------------------------------------------*/
+$("#stop").click(function(){
+    $("#animate").stop();
+});
+
+
+
+

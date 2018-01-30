@@ -34,6 +34,16 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    .hidden {
+      display: none;
+    }
+    .masInfo{
+      background:lightGrey;
+      height:100px;
+      width:300px;
+      position:absolute;
+      color: blue;
+    }
   </style>
 </head>
 
@@ -71,22 +81,22 @@
 
   <!-- COS DE LA PÀGINA WEB -->
   <main>
-    <div id="al"class="alert alert-success" role="alert">
-      Jejejejje soc un avis i te saludo si cliques la X me tanco
-      <button type="button"  id="al2" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <div id="flip" class="alert alert-warning" style="cursor: pointer;">Fés click per ocultar o mostrar més informació</div>
+    <div id="panel" class="alert alert-success">Més informació!</div>
     <div class="container my-5">
       <!-- INICI PICAR CODI -->
       <div class="row align-items-center">
         <div class="col-md-6">
           <h2>Vainilla Dolça</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" id="btn" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" id="btn" class="btn btn-outline-primary" data-toggle="modal">
             Vols Informació
           </button>
-          <input type="text" name="" id="text" hidden value="Si vols informació pots demanar-la ">
+          <div id="animate" class="hidden masInfo btn btn-outline-primary">Informació</div>
+          <br><br>
+          <button type="button" id="stop" class="btn btn-outline-primary" data-toggle="modal">
+            Stop
+          </button>
           </div>
           <div class="col-md-6">
             <div class="text-center">
@@ -116,26 +126,8 @@
       </div>
     </div>
   </footer>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informació</h5>
-          <button type="button"  id="btnt1" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="modal"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="btnt2"class="btn btn-primary" data-dismiss="modal">Tancar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- MODAL -->
+
+
   <!-- SCRIPTS -->
   <!-- Bootstrap + JQuery -->
   <script src="assets/js/twbs.js"></script>
