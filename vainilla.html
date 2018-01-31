@@ -34,6 +34,24 @@
       background-repeat: no-repeat;
       background-size: cover;
     }
+    .hidden {
+      display: none;
+    }
+    .masInfo{
+      background:#FF9DC4;
+      height:100px;
+      width:300px;
+      position:absolute;
+      color: lightblue;
+    }
+    .textInfo{
+      border: pink;
+      height: 150px;
+      width: 100%;
+      background-color: lightgreen;
+      position: relative;
+      padding: 20px;
+    }
   </style>
 </head>
 
@@ -47,7 +65,7 @@
             <div class="text-center" id="header-logo">
               <img src="assets/img/logo.png" width="auto" height="250" alt="Clínica Dental Dr. Pomar">
             </div>
-            <h1 class="display-4 text-center">Xocolata</h1></div>
+            <h1 class="display-4 text-center">Vainilla</h1></div>
         </div>
       </div>
     </section>
@@ -62,8 +80,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a id="rf" class="nav-item nav-link" href="index.html">Inici</a>
-        <a id="eb" class="nav-item nav-link" href="#">Xocolata<span class="sr-only">(current)</span></a>
-        <a id="va" class="nav-item nav-link" href="vainilla.html">Vainilla</a>
+        <a id="eb" class="nav-item nav-link" href="xocolata.html">Xocolata</a>
+        <a id="va" class="nav-item nav-link" href="#">Vainilla<span class="sr-only">(current)</span></a>
         <a id="jl" class="nav-item nav-link" href="#">Assignar 2</a>
       </div>
     </div>
@@ -71,39 +89,35 @@
 
   <!-- COS DE LA PÀGINA WEB -->
   <main>
-    <div id="al"class="alert alert-success" role="alert">
-      Jejejejje soc un avis i te saludo si cliques la X me tanco
-      <button type="button"  id="al2" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
+    <div id="flip" class="alert alert-warning" style="cursor: pointer;">Fés click per ocultar o mostrar més informació</div>
+    <div id="panel" class="alert alert-success">Més informació!</div>
     <div class="container my-5">
       <!-- INICI PICAR CODI -->
       <div class="row align-items-center">
         <div class="col-md-6">
-          <h2>Xocolata casolana</h2>
-          <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <button type="button" id="btn" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+          <h2>Vainilla Dolça</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <button type="button" id="btn" class="btn btn-outline-primary" data-toggle="modal">
             Vols Informació
           </button>
-          <input type="text" name="" id="text" hidden value="Si vols informació pots demanar-la ">
+          <div id="animate" class="hidden masInfo btn btn-outline-primary">Informació</div>
+          <br><br>
+          <button type="button" id="stop" class="btn btn-outline-primary" data-toggle="modal">
+            Stop
+          </button>
           </div>
           <div class="col-md-6">
             <div class="text-center">
-              <img id="btni"src="assets/img/batido-xoco.jpg" height="450px" width="auto" class="rounded shadow-1" alt="Gelat de la revesàvia Pepeta">
+              <img id="btni" src="assets/img/vainilla_1.jpg" height="450px" width="auto" class="rounded shadow-1" alt="Gelat de vainilla d'alta qualitat.a">
             </div>
           </div>
-          <div class="form-group">
-            <h3>Mantinte informat</h3>
-            <label for="">Nom: </label>
-            <input type="text" class="form-control"  placeholder="" value="">
-            <label for="">Email: </label>
-            <input type="text" class="form-control"  placeholder="" value="">
-            <br>
-            <button type="button" id="info" class="btn btn-outline-secondary"name="button">Informam</button>
-          </div>
-        </div>
+
         <!-- FINAL PICAR CODI -->
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-right">
+          <div id="info" class="hidden textInfo"></div>
+        </div>
       </div>
     </main>
   <!-- PEU DE PÀGINA -->
@@ -116,31 +130,13 @@
       </div>
     </div>
   </footer>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Informació</h5>
-          <button type="button"  id="btnt1" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p id="modal"></p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" id="btnt2"class="btn btn-primary" data-dismiss="modal">Tancar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- MODAL -->
+
+
   <!-- SCRIPTS -->
   <!-- Bootstrap + JQuery -->
   <script src="assets/js/twbs.js"></script>
   <!-- El nostre Script -->
-  <script src="assets/js/eb.js" charset="utf-8"></script>
+  <script src="assets/js/va.js" charset="utf-8"></script>
 </body>
 
 </html>
