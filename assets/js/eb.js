@@ -57,10 +57,10 @@ $("#info").click(function(){
 # Events
 ----------------------------------------------------------------------------- */
 $("#p1").hover(function(){
-    alert("You entered p1!");
+    alert("Estas a sobre el paragraf");
 },
 function(){
-    alert("Bye! You now leave p1!");
+    alert("Adeu has sortit del paragraf");
 });
 
 $("input").focus(function(){
