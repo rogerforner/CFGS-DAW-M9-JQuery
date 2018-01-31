@@ -49,6 +49,7 @@ $("#btni").dblclick(function(){
 $("#al2").click(function(){
     $("#al").remove();
 });
+
 $("#info").click(function(){
     $("input").val("");
 });
@@ -61,6 +62,7 @@ $("#p1").hover(function(){
 function(){
     alert("Bye! You now leave p1!");
 });
+
 $("input").focus(function(){
     $(this).css("background-color", "#0fe6c0");
 });
